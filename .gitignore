@@ -180,3 +180,4 @@ fastlane/test_output
 iOSInjectionProject/ 
 
 .DS_Store
+Secrets.plist

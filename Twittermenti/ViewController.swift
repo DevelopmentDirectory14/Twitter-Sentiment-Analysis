@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwifteriOS
 
 class ViewController: UIViewController {
     
@@ -14,6 +15,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var sentimentLabel: UILabel!
 
+    let swifter = Swifter(consumerKey: "AKeipMRVc3HE96dU8k4qPVeWZ", consumerSecret: "GZhlR6uYtKznyMi0wIRAPLnuZXBGgiYJgWQMFrCgDeZ8RAqhpt")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
