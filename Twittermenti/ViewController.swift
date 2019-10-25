@@ -23,48 +23,50 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
         
-        swifter.searchTweet(using: "#blessed", lang: "en", count: 100, tweetMode: .extended, success: { (results, metadata) in
-            
-            var tweets = [TweetSentimentClassifierInput]()
-            
-            for i in 0..<100 {
-                if let tweet = results[i]["full_text"].string {
-                    let tweetForClassification = TweetSentimentClassifierInput(text: tweet)
-                    tweets.append(tweetForClassification)
-                }
-            }
-            do {
-                
-                let predictions = try self.sentimentClassifier.predictions(inputs: tweets)
-                
-                var sentimentScore = 0
-                
-                for p in predictions {
-                    let sentiment = p.label
-                    
-                    if sentiment == "Pos" {
-                        sentimentScore += 1
-                    } else if sentiment == "Neg" {
-                        sentimentScore -= 1
-                    }
-                }
-                
-                print(sentimentScore)
-                    
-            } catch {
-                print("There was an error with making a prediction, \(error)")
-            }
-            
-        }) { (error) in
-            print("There was an error with the Twitter API Request, \(error)")
-        }
-    }
-
     @IBAction func predictPressed(_ sender: Any) {
-    
-    
-    }
+        
+            if let searchText = textField.text {
+            
+            swifter.searchTweet(using: searchText, lang: "en", count: 100, tweetMode: .extended, success: { (results, metadata) in
+                    
+                    var tweets = [TweetSentimentClassifierInput]()
+                    
+                    for i in 0..<100 {
+                        if let tweet = results[i]["full_text"].string {
+                            let tweetForClassification = TweetSentimentClassifierInput(text: tweet)
+                            tweets.append(tweetForClassification)
+                        }
+                    }
+                    do {
+                        
+                        let predictions = try self.sentimentClassifier.predictions(inputs: tweets)
+                        
+                        var sentimentScore = 0
+                        
+                        for p in predictions {
+                            let sentiment = p.label
+                            
+                            if sentiment == "Pos" {
+                                sentimentScore += 1
+                            } else if sentiment == "Neg" {
+                                sentimentScore -= 1
+                            }
+                        }
+                        
+                        self.sentimentLabel.text = String(sentimentScore)
+                            
+                    } catch {
+                        print("There was an error with making a prediction, \(error)")
+                    }
+                    
+                }) { (error) in
+                    print("There was an error with the Twitter API Request, \(error)")
+                }
+            }
+        
+        }
     
 }
 
