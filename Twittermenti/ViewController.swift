@@ -11,7 +11,7 @@ import SwifteriOS
 import CoreML
 import SwiftyJSON
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var textField: UITextField!
@@ -25,6 +25,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.textField.delegate = self
     }
         
     @IBAction func predictPressed(_ sender: Any) {
@@ -85,6 +86,11 @@ class ViewController: UIViewController {
     
     func updateUI(with sentimentScore: Int) {
         self.sentimentLabel.text = String(sentimentScore)
+    }
+    
+    func textFieldShouldReturn(textField: UITextField!) -> Bool {
+        textField.resignFirstResponder()
+        return true;
     }
 }
 
