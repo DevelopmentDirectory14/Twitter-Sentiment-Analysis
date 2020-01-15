@@ -1,4 +1,4 @@
-//  ..
+//  
 //  ViewController.swift
 //  Twittermenti
 //
@@ -21,7 +21,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     let sentimentClassifier = TweetSentimentClassifier()
 
-    let swifter = Swifter(consumerKey: "AKeipMRVc3HE96dU8k4qPVeWZ", consumerSecret: "GZhlR6uYtKznyMi0wIRAPLnuZXBGgiYJgWQMFrCgDeZ8RAqhpt")
+    let swifter = Swifter(consumerKey: AppSecrets.consumerKey, consumerSecret: AppSecrets.consumerSecret)
     
     override func viewDidLoad() {
         super.viewDidLoad()

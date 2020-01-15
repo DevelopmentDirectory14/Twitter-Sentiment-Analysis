@@ -181,3 +181,4 @@ iOSInjectionProject/
 
 .DS_Store
 Secrets.plist
+AppSecrets.swift

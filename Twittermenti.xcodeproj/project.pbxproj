@@ -10,6 +10,7 @@
 		0A3F07A42360BF03007F7FD1 /* TweetSentimentClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 0A3F07A32360BF03007F7FD1 /* TweetSentimentClassifier.mlmodel */; };
 		0A3F07B82360C659007F7FD1 /* SwifteriOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A3F07AE2360C5F2007F7FD1 /* SwifteriOS.framework */; };
 		0A3F07B92360C659007F7FD1 /* SwifteriOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0A3F07AE2360C5F2007F7FD1 /* SwifteriOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0AC5EB1A23CFB835000726A2 /* AppSecrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC5EB1923CFB835000726A2 /* AppSecrets.swift */; };
 		2F2B7C2F8A69B1FAC69CBB82 /* Pods_Twittermenti.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B899518DCB362E0ACE94ABFC /* Pods_Twittermenti.framework */; };
 		AD9EC65020FE2EF4002AE9BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9EC64F20FE2EF4002AE9BF /* AppDelegate.swift */; };
 		AD9EC65220FE2EF4002AE9BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9EC65120FE2EF4002AE9BF /* ViewController.swift */; };
@@ -73,6 +74,7 @@
 /* Begin PBXFileReference section */
 		0A3F07A32360BF03007F7FD1 /* TweetSentimentClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = TweetSentimentClassifier.mlmodel; sourceTree = "<group>"; };
 		0A3F07A52360C5F1007F7FD1 /* Swifter.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Swifter.xcodeproj; path = ../Swifter/Swifter.xcodeproj; sourceTree = "<group>"; };
+		0AC5EB1923CFB835000726A2 /* AppSecrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSecrets.swift; sourceTree = "<group>"; };
 		1AA34D2A9EF822FC07534A6A /* Pods-Twittermenti.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twittermenti.release.xcconfig"; path = "Target Support Files/Pods-Twittermenti/Pods-Twittermenti.release.xcconfig"; sourceTree = "<group>"; };
 		AD9EC64C20FE2EF4002AE9BF /* Twittermenti.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twittermenti.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD9EC64F20FE2EF4002AE9BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				AD9EC65620FE2EF7002AE9BF /* Assets.xcassets */,
 				AD9EC65820FE2EF7002AE9BF /* LaunchScreen.storyboard */,
 				AD9EC65B20FE2EF7002AE9BF /* Info.plist */,
+				0AC5EB1923CFB835000726A2 /* AppSecrets.swift */,
 			);
 			path = Twittermenti;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A3F07A42360BF03007F7FD1 /* TweetSentimentClassifier.mlmodel in Sources */,
+				0AC5EB1A23CFB835000726A2 /* AppSecrets.swift in Sources */,
 				AD9EC65220FE2EF4002AE9BF /* ViewController.swift in Sources */,
 				AD9EC65020FE2EF4002AE9BF /* AppDelegate.swift in Sources */,
 			);
