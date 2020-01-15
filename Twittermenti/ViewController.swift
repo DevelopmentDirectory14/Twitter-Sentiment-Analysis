@@ -25,13 +25,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.textField.delegate = self
+        textField.delegate = self
     }
         
     @IBAction func predictPressed(_ sender: Any) {
         
             fetchTweets()
-        
         }
     
     func fetchTweets() {
@@ -88,9 +87,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.sentimentLabel.text = String(sentimentScore)
     }
     
-    func textFieldShouldReturn(textField: UITextField!) -> Bool {
-        textField.resignFirstResponder()
-        return true;
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return true
     }
 }
 
